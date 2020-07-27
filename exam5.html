@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exam Five</title>
+
+<script type="text/javascript">
+
+	
+function show()
+{
+
+	var teamA=parseInt(document.myform.teamA.value);
+	var teamB=parseInt(document.myform.teamB.value);
+
+
+	if ((teamA>teamB)) {
+
+		document.getElementById('result').textContent=' Football A got 3 Points and Football B got 0 Point!';
+	}
+	else if (teamA==teamB) {
+		document.getElementById('result').textContent='1 Point for both because they got draw';
+	}
+		
+	
+	else
+	{
+		document.getElementById('result').textContent='Football B got 3 Points and Football A got 0 Point!';
+	}
+
+
+}
+
+
+</script>
+</head>
+<body>
+
+<h1>Football Result</h1>
+	<form name="myform">
+				
+		Football A:<input type="number" name="teamA"><br><br>
+		Football B<input type="number" name="teamB"><br><br>
+
+		<input type="button" name="" value="Show" onclick="show()"><br>
+
+		Result:<label id="result"> </label>
+
+	</form>
+</body>
+</html>
